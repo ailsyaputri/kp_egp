@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "b49d5010-c9d8-4b27-8ec7-9d8562387ab3",
+		"name": "Presensi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34650452",
+		"_collection_link": "https://speeding-water-401651.postman.co/workspace/Presensi~a5c648c6-679c-4358-b683-2d4fc589bcae/collection/34650452-b49d5010-c9d8-4b27-8ec7-9d8562387ab3?action=share&source=collection_link&creator=34650452"
+	},
+	"item": [
+		{
+			"name": "1. Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "pegawai1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "2. Get Presensi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/get-presensi"
+			},
+			"response": []
+		},
+		{
+			"name": "3. Simpan Presensi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "2|N0QOqnsEwlZYA0uz9tmL1Q4B7y8NvuFSU7LcBJq0"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "keterangan",
+							"value": "MASUK",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "-7.457560",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "109.298798",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/save-presensi"
+			},
+			"response": []
+		}
+	]
+}
